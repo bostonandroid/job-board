@@ -10,5 +10,6 @@ test: &test
 cucumber:
   <<: *test
 
-production: &development
+production:
+  <<: *default
   database: bandjob_production
