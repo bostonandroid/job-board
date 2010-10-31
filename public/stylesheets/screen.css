@@ -1,0 +1,37 @@
+table tr th, table tr td {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  text-align: left; }
+
+#description {
+  background-color: #f8f8f8;
+  width: 80%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 0.5em; }
+
+fieldset {
+  border: 0px; }
+  fieldset ol {
+    list-style-type: none;
+    margin-left: -1em; }
+    fieldset ol li.date ol label {
+      display: none; }
+    fieldset ol li.date ol li {
+      display: inline; }
+  fieldset label {
+    display: block; }
+  fieldset li.required label {
+    font-weight: bold; }
+    fieldset li.required label abbr {
+      display: none; }
+
+h1 {
+  background-image: url("/images/logo.png");
+  background-repeat: no-repeat;
+  padding-left: 48px;
+  height: 42px; }
+
+#footer {
+  margin-top: 5em; }

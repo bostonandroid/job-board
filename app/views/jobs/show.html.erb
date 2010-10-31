@@ -1,0 +1,21 @@
+<% content_for :title, @job.subject %>
+
+<% content_for :h1, @job.subject %>
+
+<% content_for :header do %>
+  <p><%= link_to 'Back to job listings', jobs_path %></p>
+<% end %>
+
+<p>Posted on <%= @job.created_at.to_s(:posted_on) %> by <%= @job.organization %>.</p>
+
+<div id="description">
+  <%= auto_link simple_format(@job.description) %>
+</div>
+
+<% if @job.email.present? %>
+  <p><%= mail_to @job.email, 'Contact by email' %></p>
+<% end %>
+
+<% if @job.phone.present? %>
+  <p><%= link_to 'Contact by phone', "tel://#{@job.phone}" %></p>
+<% end %>

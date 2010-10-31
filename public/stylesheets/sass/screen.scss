@@ -1,0 +1,59 @@
+table {
+  tr {
+    th, td {
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-bottom: 0.5em;
+      text-align: left;
+    }
+  }
+}
+
+#description {
+  background-color: #f8f8f8;
+  width: 80%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 0.5em;
+}
+
+fieldset {
+  border: 0px;
+
+  ol {
+    list-style-type: none;
+    margin-left: -1em;
+
+    li.date ol {
+      label {
+        display: none;
+      }
+      li {
+        display: inline;
+      }
+    }
+  }
+
+  label {
+    display: block;
+  }
+
+  li.required label {
+    font-weight: bold;
+
+    abbr {
+      display: none;
+    }
+  }
+}
+
+h1 {
+  background-image: url('/images/logo.png');
+  background-repeat: no-repeat;
+  padding-left: 48px;
+  height: 42px;
+}
+
+#footer {
+  margin-top: 5em;
+}

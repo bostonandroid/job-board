@@ -1,0 +1,5 @@
+<tr>
+  <th><%= link_to job.subject, job_path(job) %></th>
+  <td><%= job.created_at.to_s(:posted_on) %></td>
+  <td><%= job.organization %></td>
+</tr>

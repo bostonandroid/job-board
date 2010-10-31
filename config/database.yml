@@ -1,0 +1,11 @@
+development: &default
+  adapter: postgresql
+  database: bandjob_development
+
+test: &test
+  <<: *default
+  database: bandjob_test
+
+
+cucumber:
+  <<: *test

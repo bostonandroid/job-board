@@ -1,0 +1,20 @@
+<% content_for :title, 'Android Job Listings near Boston' %>
+
+<% content_for :h1, 'Android Jobs near Boston' %>
+
+<% content_for :header do %>
+  <p><%= link_to 'Advertise', new_job_path %></p>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brief</th>
+      <th>Posted on</th>
+      <th>Posted by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => 'job', :collection => @jobs %>
+  </tbody>
+</table>
