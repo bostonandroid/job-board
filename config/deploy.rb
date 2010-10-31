@@ -3,7 +3,7 @@ ssh_options[:forward_agent] = true
 
 set :application, "bandjob"
 
-set :repository,  "git@github.com:bostonandroid/job-board.git"
+set :repository,  "git://github.com/bostonandroid/job-board.git"
 set :scm, :git
 set :branch, "master"
 set :deploy_via, :remote_cache
