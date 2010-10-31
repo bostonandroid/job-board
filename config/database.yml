@@ -9,3 +9,6 @@ test: &test
 
 cucumber:
   <<: *test
+
+production: &development
+  database: bandjob_production
