@@ -1,0 +1,213 @@
+/* Global Reset
+------------------------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, button,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Clear Floated Elements
+------------------------------------------------------------------------------*/
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+#external-links:after,
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+#external-links,
+.clearfix {
+  display: inline-block; }
+
+* html #external-links,
+* html .clearfix {
+  height: 1%; }
+
+#external-links,
+.clearfix {
+  display: block; }
+
+/*
+  Website designed and built by Chad Mazzola (http://hellohappy.org) in September 2010.
+  Inspiration from Jan Tschichold (1928) and Peter Saville (1978)
+*/
+@font-face {
+  font-family: 'ProcionoRegular';
+  src: url("/fonts/prociono-regular-webfont.eot");
+  src: local("â˜º"), url("/fonts/prociono-regular-webfont.woff") format("woff"), url("/fonts/prociono-regular-webfont.ttf") format("truetype"), url("/fonts/prociono-regular-webfont.svg#webfontvadfXUI4") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  background: #fdd825;
+  color: #222;
+  font-family: ProcionoRegular, georgia, palatino, times new roman, serif;
+  text-rendering: optimizeLegibility; }
+
+a {
+  color: #222;
+  text-decoration: none; }
+
+p a {
+  border-bottom: 1px solid #222;
+  padding: 0 0 1px 0; }
+
+a:hover {
+  border-bottom: 2px solid #222; }
+
+#container {
+  margin: 42px 50px 154px 250px;
+  width: 600px; }
+
+h1 {
+  background: url("/images/logo.png") 2px 0 no-repeat;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 21px;
+  margin: 0 0 24px -90px;
+  padding: 28px 0 26px 90px; }
+
+h2 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 28px; }
+
+h2.alt {
+  line-height: 14px;
+  top: 20px; }
+
+h2:after {
+  content: "/";
+  margin: 0 0 0 1px; }
+
+h3 {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 28px; }
+
+p {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 14px; }
+
+p.person {
+  margin-bottom: 7px; }
+
+p.attribution {
+  font-size: 12px;
+  line-height: 21px;
+  margin: 61px 0 0 0; }
+
+ul {
+  font-size: 16px;
+  line-height: 28px;
+  margin: 88px 0 14px 0;
+  text-align: left; }
+
+ul li {
+  float: left;
+  margin: 0 8px 0 0; }
+
+ul li:after {
+  content: "/";
+  margin: 0 0 0 8px; }
+
+ul li:last-child:after {
+  content: ""; }
+
+ul li a {
+  border-bottom: 1px solid #222;
+  padding: 0 0 1px 0; }
+
+#footer {
+  margin-top: 5em; }
+
+/* forms */
+/*****************************************************************************/
+fieldset {
+  border: 0px; }
+  fieldset ol {
+    list-style-type: none; }
+    fieldset ol li {
+      margin: 0 0 12px 0; }
+      fieldset ol li input[type="text"],
+      fieldset ol li textarea {
+        padding: 6px 0;
+        font-family: monaco, courier, ProcionoRegular, georgia, palatino, times new roman, serif;
+        font-size: 16px;
+        width: 100%; }
+      fieldset ol li textarea {
+        height: 250px;
+        margin: 2px 0 0 0; }
+    fieldset ol li.date ol label {
+      display: none;
+      font-weight: normal; }
+    fieldset ol li.date ol li {
+      display: inline;
+      margin: 0 0 12px 0; }
+  fieldset label,
+  fieldset legend.label {
+    display: block;
+    font-size: 16px;
+    padding: 0 0 2px 0; }
+  fieldset li.required label {
+    font-weight: normal; }
+    fieldset li.required label abbr {
+      display: none; }

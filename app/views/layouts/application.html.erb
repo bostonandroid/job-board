@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="description" content="Job board for Android developers near Boston, MA.">
     <title><%= yield :title %> - Boston Android job board</title>
-    <%= stylesheet_link_tag 'screen', :media => 'all', :cache => true %>
+    <link rel="icon" href="favicon.ico">
+    <%= stylesheet_link_tag 'application', :media => 'all', :cache => true %>
     <%= csrf_meta_tag %>
   </head>
   <body class="<%= body_class %>">
-    <%= yield :header -%>
+
+    <div id="container">
+
     <h1><%= yield :h1 -%></h1>
     <%= render :partial => 'shared/flashes' -%>
+
+    <%= yield :header -%>
 
     <%= yield -%>
 
     <p id="footer">
       Brought to you by the <%= link_to 'Boston Android developers group', 'http://bostonandroid.org/' %>.
     </p>
+    </div>
   </body>
 </html>
