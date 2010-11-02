@@ -62,7 +62,10 @@ table {
 
 /* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
 #external-links:after,
-.clearfix:after {
+.clearfix:after,
+ul#nav:after,
+#job-post ul#contact-methods:after, #job-post
+ul#contact-methods:after {
   clear: both;
   content: ' ';
   display: block;
@@ -73,15 +76,24 @@ table {
   height: 0; }
 
 #external-links,
-.clearfix {
+.clearfix,
+ul#nav,
+#job-post ul#contact-methods, #job-post
+ul#contact-methods {
   display: inline-block; }
 
 * html #external-links,
-* html .clearfix {
+* html .clearfix,
+* html ul#nav,
+* html #job-post ul#contact-methods, #job-post
+* html ul#contact-methods {
   height: 1%; }
 
 #external-links,
-.clearfix {
+.clearfix,
+ul#nav,
+#job-post ul#contact-methods, #job-post
+ul#contact-methods {
   display: block; }
 
 /*
@@ -116,30 +128,37 @@ a:hover {
   margin: 42px 50px 154px 250px;
   width: 600px; }
 
+h1, h2, h3, h4, h5 {
+  font-weight: normal; }
+
 h1 {
   background: url("/images/logo.png") 2px 0 no-repeat;
   font-size: 24px;
-  font-weight: normal;
   line-height: 21px;
-  margin: 0 0 24px -90px;
-  padding: 28px 0 26px 90px; }
+  margin: 0 0 0 -90px;
+  padding: 14px 0 40px 90px; }
+
+ul#nav {
+  font-size: 16px;
+  line-height: 28px;
+  margin: -32px 0 42px 0;
+  text-align: left; }
+  ul#nav li {
+    float: left;
+    margin: 0 6px 0 0; }
+    ul#nav li:after {
+      content: "/";
+      margin: 0 0 0 8px; }
+    ul#nav li:last-child:after {
+      content: ""; }
+    ul#nav li a {
+      border-bottom: 1px solid #222;
+      padding: 0 0 1px 0; }
+      ul#nav li a:hover {
+        border-bottom: 2px solid #222; }
 
 h2 {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 28px; }
-
-h2.alt {
-  line-height: 14px;
-  top: 20px; }
-
-h2:after {
-  content: "/";
-  margin: 0 0 0 1px; }
-
-h3 {
   font-size: 24px;
-  font-weight: normal;
   line-height: 28px; }
 
 p {
@@ -147,55 +166,76 @@ p {
   line-height: 28px;
   margin-bottom: 14px; }
 
-p.person {
-  margin-bottom: 7px; }
-
-p.attribution {
-  font-size: 12px;
-  line-height: 21px;
-  margin: 61px 0 0 0; }
-
-ul {
+ul#job-list {
   font-size: 16px;
   line-height: 28px;
-  margin: 88px 0 14px 0;
-  text-align: left; }
+  margin: 46px 0 88px 0; }
+  ul#job-list li {
+    margin: 0 0 -4px 0; }
+    ul#job-list li h2 {
+      display: inline;
+      margin: 0 0 4px 0; }
+      ul#job-list li h2:hover {
+        border-bottom: 2px solid #222; }
+    ul#job-list li h3 {
+      font-size: 14px; }
+    ul#job-list li h4 {
+      font-size: 14px;
+      left: -130px;
+      position: relative;
+      text-align: right;
+      top: 33px;
+      width: 120px; }
 
-ul li {
-  float: left;
-  margin: 0 8px 0 0; }
+#job-post {
+  margin: 46px 0 84px 0; }
+  #job-post h2 {
+    margin: 0 0 4px 0; }
+  #job-post ul#contact-methods {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 28px 0 42px 0;
+    text-align: left; }
+    #job-post ul#contact-methods li {
+      float: left;
+      margin: 0 6px 0 0; }
+      #job-post ul#contact-methods li:after {
+        content: "/";
+        margin: 0 0 0 8px; }
+      #job-post ul#contact-methods li:last-child:after {
+        content: ""; }
+      #job-post ul#contact-methods li a {
+        border-bottom: 1px solid #222;
+        padding: 0 0 1px 0; }
+        #job-post ul#contact-methods li a:hover {
+          border-bottom: 2px solid #222; }
 
-ul li:after {
-  content: "/";
-  margin: 0 0 0 8px; }
-
-ul li:last-child:after {
-  content: ""; }
-
-ul li a {
-  border-bottom: 1px solid #222;
-  padding: 0 0 1px 0; }
-
-#footer {
-  margin-top: 5em; }
+#new-job {
+  margin: 46px 0 84px 0; }
+  #new-job h2 {
+    margin: 0 0 24px 0; }
 
 /* forms */
 /*****************************************************************************/
 fieldset {
   border: 0px; }
+  fieldset.buttons {
+    margin: 20px 0 0 0; }
   fieldset ol {
     list-style-type: none; }
     fieldset ol li {
       margin: 0 0 12px 0; }
       fieldset ol li input[type="text"],
       fieldset ol li textarea {
-        padding: 6px 0;
+        padding: 5px 0 4px 0;
         font-family: monaco, courier, ProcionoRegular, georgia, palatino, times new roman, serif;
         font-size: 16px;
         width: 100%; }
       fieldset ol li textarea {
-        height: 250px;
+        height: 248px;
         margin: 2px 0 0 0; }
+      fieldset ol li p.inline-errors {
+        color: #f00; }
     fieldset ol li.date ol label {
       display: none;
       font-weight: normal; }
@@ -206,8 +246,57 @@ fieldset {
   fieldset legend.label {
     display: block;
     font-size: 16px;
-    padding: 0 0 2px 0; }
+    padding: 0 0 4px 0; }
   fieldset li.required label {
     font-weight: normal; }
     fieldset li.required label abbr {
       display: none; }
+
+div#flash {
+  background: #222; }
+  div#flash div#flash_notice {
+    color: #fdd825;
+    font-size: 18px;
+    padding: 8px; }
+
+/* button
+*******************************************************************************/
+input[type="submit"]::-moz-focus-inner {
+  border: 0; }
+
+input[type="submit"] {
+  background: #222;
+  background: -moz-linear-gradient(0% 100% 90deg, #222222, #444444);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#444444), to(#222222));
+  border: 1px solid #555;
+  border-width: 1px 1px 0 1px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  box-shadow: inset 0 1px 0 0 #666;
+  -moz-box-shadow: inset 0 1px 0 0 #666;
+  -webkit-box-shadow: inset 0 1px 0 0 #666;
+  color: #fff;
+  font-family: ProcionoRegular, georgia, palatino, times new roman, serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1;
+  padding: 7px 0 8px 0;
+  text-align: center;
+  width: 150px; }
+
+input[type="submit"]:hover {
+  background: #333;
+  background: -moz-linear-gradient(0% 100% 90deg, #333333, #555555);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#555555), to(#333333));
+  cursor: pointer; }
+
+input[type="submit"]:active {
+  background: #000;
+  background: -moz-linear-gradient(0% 100% 90deg, black, #222222);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#222222), to(black));
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border-width: 0 1px 1px 1px;
+  padding: 8px 0 7px 0; }

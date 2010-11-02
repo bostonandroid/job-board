@@ -1,11 +1,10 @@
 <% content_for :title, 'Android Job Listings near Boston' %>
 
-<% content_for :h1, 'Android Jobs near Boston' %>
-
 <% content_for :header do %>
-  <p><%= link_to 'Advertise', new_job_path %></p>
+  <p><%= link_to 'Post a new job', new_job_path %></p>
 <% end %>
 
-<ul class="clearfix">
+<ul id="job-list" class="clearfix">
   <%= render :partial => 'job', :collection => @jobs %>
 </ul>
+

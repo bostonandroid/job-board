@@ -1,21 +1,19 @@
 <% content_for :title, 'New ad' %>
 
-<% content_for :h1, 'Post an Android job for Boston' %>
+<div id="new-job">
+  <h2>Post a job listing</h2>
 
-<% content_for :header do %>
-  <p><%= link_to 'Back to job listings', jobs_path %></p>
-<% end %>
-
-<% semantic_form_for @job do |form| %>
-  <% form.inputs do %>
-    <%= form.input :subject %>
-    <%= form.input :organization %>
-    <%= form.input :description %>
-    <%= form.input :expires_on, :start_year => Time.now.year %>
-    <%= form.input :email %>
-    <%= form.input :phone %>
+  <% semantic_form_for @job do |form| %>
+    <% form.inputs do %>
+      <%= form.input :subject %>
+      <%= form.input :organization %>
+      <%= form.input :description %>
+      <%= form.input :expires_on, :start_year => Time.now.year %>
+      <%= form.input :email %>
+      <%= form.input :phone %>
+    <% end %>
+    <% form.buttons do %>
+      <%= form.commit_button 'Post ad' %>
+    <% end %>
   <% end %>
-  <% form.buttons do %>
-    <%= form.commit_button 'Post ad' %>
-  <% end %>
-<% end %>
+</div>

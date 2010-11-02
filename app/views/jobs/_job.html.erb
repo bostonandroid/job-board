@@ -1,7 +1,5 @@
 <li>
-  <%= link_to "job_path(job)" do %>
-    <%= job.subject %>
-    <%= job.created_at.to_s(:posted_on) %>
-    <%= job.organization %>
-  <% end %>
+  <h4><%= job.created_at.to_s(:posted_on) %></h4>
+  <h2><%= link_to job_path(job) do %><%= job.subject %><% end %></h2>
+  <h3><%= job.organization %></h3>
 </li>

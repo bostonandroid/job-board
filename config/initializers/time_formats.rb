@@ -1,1 +1,1 @@
-Time::DATE_FORMATS.update(:posted_on => "%B %d, %Y")
+Time::DATE_FORMATS.update(:posted_on => "%b %d, %Y")
