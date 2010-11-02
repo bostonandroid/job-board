@@ -1,5 +1,5 @@
 /*
-  Website designed and built by Chad Mazzola (http://hellohappy.org) in September 2010.
+  Website design based on bostonandroid.org site, built by Chad Mazzola (http://hellohappy.org) in September 2010.
   Inspiration from Jan Tschichold (1928) and Peter Saville (1978)
 */
 
@@ -99,27 +99,27 @@ ul#job-list {
   li {
     margin: 0 0 -4px 0;
 
-      h2 {
-        display: inline;
-        margin: 0 0 4px 0;
+    h2 {
+      display: inline;
+      margin: 0 0 4px 0;
 
-        &:hover {
-         border-bottom: 2px solid #222;
-        }
+      &:hover {
+       border-bottom: 2px solid #222;
       }
+    }
 
-      h3 {
-        font-size: 14px;
-      }
+    h3 {
+      font-size: 14px;
+    }
 
-      h4 {
-        font-size: 14px;
-        left: -130px;
-        position: relative;
-        text-align: right;
-        top: 33px;
-        width: 120px;
-      }
+    h4 {
+      font-size: 14px;
+      left: -130px;
+      position: relative;
+      text-align: right;
+      top: 33px;
+      width: 120px;
+    }
   }
 }
 
@@ -170,9 +170,6 @@ ul#job-list {
   }
 }
 
-#footer {
-}
-
 /* forms */
 /*****************************************************************************/
 fieldset {
@@ -191,7 +188,7 @@ fieldset {
       input[type="text"],
       textarea {
         padding: 5px 0 4px 0;
-        font-family: monaco, courier, ProcionoRegular, georgia, palatino, times new roman, serif;
+        font-family: monaco, monospace;
         font-size: 16px;
         width: 100%;
       }

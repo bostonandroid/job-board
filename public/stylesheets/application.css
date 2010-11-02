@@ -97,7 +97,7 @@ ul#contact-methods {
   display: block; }
 
 /*
-  Website designed and built by Chad Mazzola (http://hellohappy.org) in September 2010.
+  Website design based on bostonandroid.org site, built by Chad Mazzola (http://hellohappy.org) in September 2010.
   Inspiration from Jan Tschichold (1928) and Peter Saville (1978)
 */
 @font-face {
@@ -228,7 +228,7 @@ fieldset {
       fieldset ol li input[type="text"],
       fieldset ol li textarea {
         padding: 5px 0 4px 0;
-        font-family: monaco, courier, ProcionoRegular, georgia, palatino, times new roman, serif;
+        font-family: monaco, monospace;
         font-size: 16px;
         width: 100%; }
       fieldset ol li textarea {

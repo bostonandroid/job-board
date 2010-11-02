@@ -12,19 +12,17 @@
 
     <div id="container">
 
-    <h1>Android Job Listings near Boston</h1>
-    <ul id="nav">
-      <li><%= link_to 'Full job list', jobs_path %></li>
-      <li><%= link_to 'Post a new job', new_job_path %></li>
-    </ul>
+      <h1>Android Job Listings near Boston</h1>
+      <ul id="nav">
+        <li><%= link_to 'Full job list', jobs_path %></li>
+        <li><%= link_to 'Post a new job', new_job_path %></li>
+      </ul>
 
-    <%= render :partial => 'shared/flashes' -%>
+      <%= render :partial => 'shared/flashes' -%>
 
-    <%= yield -%>
+      <%= yield -%>
 
-    <p id="footer">
-      Brought to you by the <%= link_to 'Boston Android developers group', 'http://bostonandroid.org/' %>.
-    </p>
+      <p id="footer">Brought to you by the <%= link_to 'Boston Android developers group', 'http://bostonandroid.org/' %>.</p>
     </div>
   </body>
 </html>

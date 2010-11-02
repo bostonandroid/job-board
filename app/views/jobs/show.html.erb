@@ -1,9 +1,5 @@
 <% content_for :title, @job.subject %>
 
-<% content_for :header do %>
-  <p><%= link_to 'Back to job listings', jobs_path %></p>
-<% end %>
-
 <div id="job-post">
   <h2 class="job-title"><%= @job.subject %></h2>
 
@@ -12,7 +8,7 @@
   <div id="description">
     <%= auto_link simple_format(@job.description) %>
   </div>
-  
+
   <ul id="contact-methods">
     <% if @job.email.present? %>
       <li><%= mail_to @job.email, 'Contact by email' %></li>
@@ -22,5 +18,4 @@
       <li><%= link_to 'Contact by phone', "tel://#{@job.phone}" %></li>
     <% end %>
   </ul>
-  
 </div>
