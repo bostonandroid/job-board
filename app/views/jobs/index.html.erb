@@ -1,4 +1,7 @@
 <% content_for :title, 'Android Job Listings near Boston' %>
+<% content_for :head do %>
+  <%= auto_discovery_link_tag :atom, jobs_url(:format => :atom), :title => 'Feed of Boston Android jobs' %>
+<% end %>
 
 <% content_for :header do %>
   <p><%= link_to 'Post a new job', new_job_path %></p>

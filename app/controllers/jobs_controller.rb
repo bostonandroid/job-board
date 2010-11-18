@@ -1,7 +1,8 @@
 class JobsController < ApplicationController
+  respond_to :html, :atom, :only => :index
+
   def index
     @jobs = Job.index
-    # TODO: atom
   end
 
   def new

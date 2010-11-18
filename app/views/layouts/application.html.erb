@@ -7,14 +7,14 @@
     <link rel="icon" href="favicon.ico">
     <%= stylesheet_link_tag 'application', :media => 'all', :cache => true %>
     <%= csrf_meta_tag %>
+    <%= yield :head %>
   </head>
   <body class="<%= body_class %>">
 
     <div id="container">
-
       <h1>Android Job Listings near Boston</h1>
       <ul id="nav">
-        <li><%= link_to 'Full job list', jobs_path %></li>
+        <li><%= link_to 'Full job list', jobs_path %> <%= link_to image_tag('atom.png'), jobs_url(:format => :atom), :class => 'atom-icon' %></li>
         <li><%= link_to 'Post a new job', new_job_path %></li>
       </ul>
 
